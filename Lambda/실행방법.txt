@@ -1,0 +1,39 @@
+1. AWS Console에서 람다함수 생성 
+Function name : dictate-function
+Runtime : Python 3.9
+Change default execution role을 확장하고 Use an existing role을 선택 (일단 Create a new role with basic Lambda permissions 선택)
+Existing role에서 lambdaPollyRole을 선택
+함수 기능 : DynamoDB에서 노트의 텍스트를 검색
+-> Amazon Polly로 텍스트를 음성으로 변환하고 오디오 스트림을 로컬 파일로 저장
+-> Amazon S3에 파일을 업로드하고 함수로부터 반환할 미리 서명된 URL을 생성
+
+
+2. 2개의 환경 변수, MP3_BUCKET_NAME 및 TABLE_NAME을 dictate-function에 추가
+apiBucket=$(aws s3api list-buckets --output text --query 'Buckets[?contains(Name, `notes-bucket`) ==  `true`] | [0].Name')
+
+notesTable='Notes'
+
+aws lambda update-function-configuration --function-name dictate-function --environment  Variables="{MP3_BUCKET_NAME=$apiBucket, TABLE_NAME=$notesTable}"
+
+
+3. AWS Lambda 함수 게시
+o app.py 파일을 zip 파일로 압축 
+zip dictate-function.zip app.py 
+
+o Lambda 함수에 새 코드를 업로드합니다.
+aws lambda update-function-code --function-name dictate-function --zip-file fileb://dictate-function.zip
+
+o 함수 핸들러 업데이트
+aws lambda update-function-configuration --function-name dictate-function --handler app.lambda_handler
+ 
+
+4. AWS Lambda 함수 호출
+o dictate-function 폴더에 오른쪽 마우스를 클릭 하고 New File 를 선택하여 event.json 파일 생성
+
+o event.json 편집
+{ "UserId": "newbie", "NoteId": "2", "VoiceId": "Joey" } 
+
+o Lambda 함수 호출
+aws lambda invoke --function-name dictate-function --payload fileb://event.json response.txt
+
+
