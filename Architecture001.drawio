@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-09-28T04:23:39.336Z" agent="5.0 (Windows)" etag="zGY8rJQQElryuOv_Rquk" version="20.3.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-28T04:26:17.880Z" agent="5.0 (Windows)" etag="dv-x6M_CnqcZU3cWj3Hs" version="20.3.6" type="github">
   <diagram id="tdYZeLyU5_rgm6ZOuu79" name="페이지-1">
-    <mxGraphModel dx="2740" dy="1695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1566" dy="969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,7 @@
           <mxGeometry x="632.25" y="288" width="96" height="31" as="geometry" />
         </mxCell>
         <mxCell id="-03WtyDzt-SDoEfTEMrn-54" value="" style="shape=cross;whiteSpace=wrap;html=1;strokeColor=none;fontSize=14;fillColor=#990000;size=0.046511627906976744;rotation=45;" parent="-03WtyDzt-SDoEfTEMrn-37" vertex="1">
-          <mxGeometry x="617" y="394" width="33" height="30" as="geometry" />
+          <mxGeometry x="609" y="410" width="33" height="30" as="geometry" />
         </mxCell>
         <mxCell id="osOyr8j2rlkwuVWXkvkK-159" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=4;fontSize=20;fontColor=#000000;endArrow=none;endFill=0;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="-03WtyDzt-SDoEfTEMrn-37" source="osOyr8j2rlkwuVWXkvkK-90" target="osOyr8j2rlkwuVWXkvkK-144" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -53,7 +53,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="-03WtyDzt-SDoEfTEMrn-57" value="" style="shape=cross;whiteSpace=wrap;html=1;strokeColor=none;fontSize=14;fillColor=#990000;size=0.046511627906976744;rotation=45;" parent="1" vertex="1">
-          <mxGeometry x="1099" y="438" width="33" height="30" as="geometry" />
+          <mxGeometry x="1102" y="422" width="33" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-03WtyDzt-SDoEfTEMrn-62" value="사용자" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry y="703" width="96" height="20" as="geometry" />
